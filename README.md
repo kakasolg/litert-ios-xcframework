@@ -1,5 +1,13 @@
 # litert-ios-xcframework
 
+> **Superseded — archived.** Since LiteRT 2.3.2, upstream's `Package.swift` points its binary targets at prebuilt
+> xcframeworks on the [LiteRT releases](https://github.com/google-ai-edge/LiteRT/releases) page, so you no longer
+> need a self-built `CLiteRT.xcframework`. If SwiftPM fails to resolve upstream because of Git LFS
+> ([LiteRT#8521](https://github.com/google-ai-edge/LiteRT/issues/8521)), the
+> [kakasolg/LiteRT](https://github.com/kakasolg/LiteRT) fork carries the 2.3.2 package without LFS attributes:
+> `.package(url: "https://github.com/kakasolg/LiteRT.git", exact: "2.3.2-spm-fix.1")`.
+> The v1.0.0 release below (built from a 2026-08 LiteRT revision) stays available for existing users.
+
 Prebuilt `CLiteRT.xcframework` — the C API of Google's
 [`google-ai-edge/LiteRT`](https://github.com/google-ai-edge/LiteRT) for iOS/Metal,
 built via `//litert/swift:CLiteRT` (`--config=ios_arm64 --compilation_mode=opt`).
